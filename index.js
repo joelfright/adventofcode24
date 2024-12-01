@@ -1,3 +1,3 @@
-import {solution} from './day1/solution.js';
+import { solution as day1 } from './day1/solution.js';
 
-solution();
+console.log(`Day 1 | Answer: ${day1()}`);
