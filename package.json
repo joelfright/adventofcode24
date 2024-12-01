@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.10.1"
+  },
+  "name": "adventofcode24",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "undici-types": "^6.20.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
