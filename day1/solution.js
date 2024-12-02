@@ -13,7 +13,7 @@ export function solution() {
   list.one.sort();
   list.two.sort();
 
-  function partOne(){
+  function partOne() {
     let result = 0;
     for (let index = 0; index < list.one.length; index++) {
       result += Math.abs(list.one.at(index) - list.two.at(index));
@@ -21,10 +21,10 @@ export function solution() {
     return result;
   }
 
-  function partTwo(){
+  function partTwo() {
     let countedNum = {};
     list.two.forEach(value => {
-        countedNum[value] = (countedNum[value] || 0) + 1;
+      countedNum[value] = (countedNum[value] || 0) + 1;
     })
     let result = 0;
     list.one.forEach(number => {
