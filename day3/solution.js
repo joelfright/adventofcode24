@@ -25,4 +25,4 @@ export function solution() {
   })
 
   return `Part 1: ${resultP1} / Part 2: ${resultP2}`;
-}7
+}
