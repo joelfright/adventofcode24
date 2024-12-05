@@ -30,7 +30,7 @@ export function solution() {
     if(part === 1){
       failed ? incorrectUpdates.push({failNum, update}) : resultP1 += update[Math.floor(update.length / 2)]
     }else if(part === 2){
-      failed ? fixUpdates([{failNum, update}]) : resultP2 += update[Math.floor(update.length / 2)];
+      failed ? checkUpdate(swapNum(failNum, update), 2) : resultP2 += update[Math.floor(update.length / 2)];
     }
   }
 
@@ -40,12 +40,8 @@ export function solution() {
     return update;
   }
 
-  const fixUpdates = (update) => {
-    update.forEach(({failNum, update}) => checkUpdate(swapNum(failNum, update), 2))
-  }
-
   updates.forEach(update => checkUpdate(update, 1))
-  fixUpdates(incorrectUpdates)
+  incorrectUpdates.forEach(({failNum, update}) => checkUpdate(swapNum(failNum, update), 2))
 
   return `Part 1: ${resultP1} / Part 2: ${resultP2}`;
 
